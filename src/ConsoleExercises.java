@@ -25,13 +25,21 @@ public class ConsoleExercises {
 //        String userSentence = scanner.nextLine();
 //        System.out.println("Here's your sentence: " + userSentence);
 
-        System.out.println("What is the length of the Codeup Classroom?");
-        int length = scanner.nextInt();
-        System.out.println("What is the width of the Codeup Classroom?");
-        int width = scanner.nextInt();
-        System.out.println("Area: " + (length * width));
-        System.out.println("Perimeter: " + ((length * 2) + (width * 2)));
-        scanner.useDelimiter("\n");
+//        System.out.println("What is the length of the Codeup Classroom?");
+//        float length = scanner.nextFloat(); // float vs int
+//        System.out.println("What is the width of the Codeup Classroom?");
+//        float width = scanner.nextFloat();
+//        System.out.println("Area: " + (length * width));
+//        System.out.println("Perimeter: " + ((length * 2) + (width * 2)));
+
+        System.out.println("What is your favorite quote?");
+        String userQuote = scanner.nextLine();
+        System.out.println("Here's your quote: " + userQuote);
+        System.out.println("How many words are in that quote?");
+        String numOfWords = scanner.nextLine();
+        System.out.println("You said there's " + numOfWords + "words...");
+        int actualAmount = (userQuote.trim().split("\\s+").length);
+        System.out.println("There's actually " + actualAmount + " words...");
     }
 
 }
