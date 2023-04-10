@@ -18,6 +18,30 @@ public class consoleIOLecture {
         String userInput = scanner.next();
 //        System.out.println("The user entered: " + userInput); // to concatinate
         System.out.printf("Your string was: %s", userInput);
+
+        // SCANNER NOTES WITH SPACES DISCUSSED
+
+        //        System.out.println("Hi, what's your name?");
+//        String userName = scanner.next(); // Gabriella // only use .next() if you're only interested in single words
+//        System.out.println("Hello, " + userName);
+//
+//        System.out.println("What's your full name?");
+//        // since scanner listens for user input, it took the 'return' key as an input.
+//        // but with .nextline(), it nullifies it, kind of like a ghost input.
+//        // it absorbs the carriage return (enter key)
+//        String nextLine = scanner.nextLine();
+//
+//        String fullName = scanner.nextLine();
+//        System.out.println("Hi, " + fullName);
+
+//        System.out.println("Please enter an integer: ");
+//        int userInputInteger = scanner.nextInt();
+//        System.out.println("Your integer was: " + userInputInteger);
+//
+//        System.out.println("What is your name?");
+//        String carriageReturn = scanner.nextLine();
+//        String name = scanner.nextLine();
+//        System.out.println("Your name is " + name);
     }
 }
 

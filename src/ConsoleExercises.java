@@ -9,8 +9,29 @@ public class ConsoleExercises {
         double pi = 3.14159;
 //        System.out.printf("The value of pi is approximately %.2f%n", pi);
 
-        System.out.println("Hi, what's your name?");
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName);
+//        System.out.println("Please input an integer:");
+//        int userIntegerInput = scanner.nextInt();
+//        System.out.println("Your integer is: " + userIntegerInput);
+
+//        System.out.println("Please enter 3 words:");
+//        String firstWord = scanner.nextLine();
+//        String secondWord = scanner.nextLine();
+//        String thirdWord = scanner.nextLine();
+//        System.out.println("Your first word: " + firstWord);
+//        System.out.println("Your second word: " + secondWord);
+//        System.out.println("Your first word: " + thirdWord);
+
+//        System.out.println("Please enter a sentence:");
+//        String userSentence = scanner.nextLine();
+//        System.out.println("Here's your sentence: " + userSentence);
+
+        System.out.println("What is the length of the Codeup Classroom?");
+        int length = scanner.nextInt();
+        System.out.println("What is the width of the Codeup Classroom?");
+        int width = scanner.nextInt();
+        System.out.println("Area: " + (length * width));
+        System.out.println("Perimeter: " + ((length * 2) + (width * 2)));
+        scanner.useDelimiter("\n");
     }
+
 }
