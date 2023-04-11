@@ -62,12 +62,18 @@ public class controlStatementsLoopsLecture {
 //        } while (i <= 10);
 
         // for loop // MOST VERSITLE LOOP IN PROGRAMMING
-        for (int i = 0; i <= 10; i++) {
-            System.out.println("i is " + i);
-        }
+//        for (int i = 0; i <= 10; i++) {
+//            System.out.println("i is " + i);
+//        }
 
         // break and continue
-
+        for (int i = 0; i <= 10; i++) {
+            System.out.println("i is " + i);
+            if (i == 5) {
+                break; // stops and breaks out of the loop
+                // continue skips the iteration - not much use for it in javascript or java
+            }
+        }
 
     }
 }
