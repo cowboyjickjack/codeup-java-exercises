@@ -4,7 +4,7 @@ public class Bob {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ask Bob a question! :)");
+        System.out.println("What would you like to say to Bob? :)");
         String userInput = scanner.nextLine();
 
         if (userInput.trim().toLowerCase().endsWith("?")) {
