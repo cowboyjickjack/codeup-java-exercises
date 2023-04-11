@@ -56,20 +56,36 @@ public class ControlFlowExercises {
 
         // TABLE OF POWERS
 
-        System.out.println("What number would you like to go up to?");
-        int userInteger = scanner.nextInt();
+//        System.out.println("What number would you like to go up to?");
+//        int userInteger = scanner.nextInt();
+//
+//        System.out.println("Here is your table!");
+//        System.out.println("number | squared | cubed");
+//        System.out.println("------ | ------- | -----");
+//
+//        for (int i = 1; i <= userInteger; i++) {
+//            int numSquared = (int) Math.pow(i, 2);
+//            int numCubed = (int) Math.pow(i, 3);
+//
+//            System.out.println(userInteger + "      |" + numSquared + "      |" + numCubed);
+//
+//        }
 
-        System.out.println("Here is your table!");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
+        // GRADES INTO NUMBER GRADES
+        System.out.println("What is the number grade?");
+        int numberGrade = scanner.nextInt();
+        scanner.nextLine(); // nullifies the enter key
 
-        for (int i = 1; i <= userInteger; i++) {
-            int numSquared = (int) Math.pow(i, 2);
-            int numCubed = (int) Math.pow(i, 3);
-
-            System.out.println(userInteger + "      |" + numSquared + "      |" + numCubed);
-
+        if (numberGrade <= 100 && numberGrade >= 88) {
+            System.out.println("You get an A");
+        } else if (numberGrade <= 87 && numberGrade >= 80) {
+            System.out.println("Woohoo, you get a B");
+        } else if (numberGrade <= 79 && numberGrade >= 67) {
+            System.out.println("Oh well... you get a C");
+        } else if (numberGrade <= 66 && numberGrade >= 60) {
+            System.out.println("Ever head of a D?");
+        } else if (numberGrade <= 59) {
+            System.out.println("FAILURE!!! F!!!");
         }
-
     }
 }
