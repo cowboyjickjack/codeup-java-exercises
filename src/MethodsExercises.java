@@ -31,7 +31,7 @@ public class MethodsExercises {
 
         if (userNumber >= min && userNumber <= max) {
             System.out.println("Wow, you did it.");
-        } else if (userNumber >= max || userNumber <= min) {
+        } else {
             System.out.println("You didn't follow the rules!");
         }
         return userNumber;
