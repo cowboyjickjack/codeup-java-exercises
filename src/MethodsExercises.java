@@ -6,9 +6,10 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
 
 //        System.out.println(division(5, 2));
-        getInteger(0, 100);
+//        getInteger(0, 100);
 
 //        System.out.println(factorial(4));
+        D
     }
 
     public static int addition(int num1, int num2) {
@@ -36,13 +37,28 @@ public class MethodsExercises {
         }
         return userNumber;
     }
+    public static long factorial(int n) {
+        long fact = 1;
+        for (int i = 2; i <= n; i++) {
+            fact = fact * i;
+        }
+        return fact;
+    }
 
-//    public static long factorial(int n) {
-//        long fact = 1;
-//        for (int i = 2; i <= n; i++) {
-//            fact = fact * i;
-//        }
-//        return fact;
-//    }
+    public class Dice {
+        public Random random;
 
+        public Dice() {
+            this.random = new Random();
+        }
+
+        public void main(String[] args) {
+            Dice d = new Dice();
+            System.out.println("The dice rolled a " + d.roll() + ".");
+        }
+
+        public int roll() {
+            return random.nextInt(20); // value in [0;20[, so [0;19]
+        }
+    }
 }
