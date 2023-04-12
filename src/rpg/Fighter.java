@@ -41,9 +41,11 @@ public class Fighter {
     // The Java Compiler = 'out' folder, which is running it
     // if NO explicit argument instructor, the Java Compiler will create it for you
     public Fighter(){
-
     }
+
     // since we're in the same class, we don't need to use the setter ;)
+    // when you make an overloaded instructor, the compiler no longer does the default of making one for you
+    // since the programmer is overriding it
     public Fighter(String name, int hitPoints, int maxDamage) {
         this.name = name;
         this.hitPoints = hitPoints;

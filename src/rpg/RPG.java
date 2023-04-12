@@ -15,5 +15,8 @@ public class RPG { // class is like a blueprint
         fighter2.setHitPoints(25);
         fighter2.setMaxDamage(23);
         fighter2.printStats();
+
+        Fighter fighter3 = new Fighter("Balgruuf", 95,45);
+        fighter3.printStats();
     }
 }

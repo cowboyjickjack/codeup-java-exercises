@@ -22,4 +22,13 @@ public class Cat {
     public void makeNoise() {
         System.out.println(name + " goes " + sound + "!");
     }
+
+    //CONSTRUCTORS
+    public Cat(){
+    }
+
+    public Cat(String name, String sound){
+        this.name = name;
+        this.sound = sound;
+    }
 }
