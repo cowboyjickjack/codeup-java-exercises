@@ -5,9 +5,12 @@ public class Fighter {
 
     // just info rn, like a definition
     // no visibility = default visibility and can only be seen for the package
+    public static int totalFighters; // static ("global") variable
     private String name;
     private int hitPoints;
     private int maxDamage;
+
+    public static int armorClass = 15;
 
     // used since the visibilities are private
     public String getName(){
@@ -33,7 +36,7 @@ public class Fighter {
     }
     // in order for fighter to do something, we need to create a method
     public void printStats(){
-        System.out.printf("%s has %d hit points and does %d maximum damage.%n", name, hitPoints, maxDamage);
+        System.out.printf("%s has %d hit points and does %d maximum damage.%n", name, hitPoints, maxDamage, armorClass);
     }
 
 
@@ -43,12 +46,14 @@ public class Fighter {
     // The Java Compiler = 'out' folder, which is running it
     // if NO explicit argument instructor, the Java Compiler will create it for you
     public Fighter(){
+        totalFighters++;
     }
 
     // since we're in the same class, we don't need to use the setter ;)
     // when you make an overloaded instructor, the compiler no longer does the default of making one for you
     // since the programmer is overriding it
     public Fighter(String name, int hitPoints, int maxDamage) {
+        totalFighters++;
         this.name = name;
         this.hitPoints = hitPoints;
         this.maxDamage = maxDamage;

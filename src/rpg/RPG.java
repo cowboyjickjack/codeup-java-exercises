@@ -26,5 +26,7 @@ public class RPG { // class is like a blueprint
         // and static classes don't need to instantiate an object
         int d20roll = D20.rollD20();
         System.out.println(d20roll);
+
+        System.out.println(Fighter.totalFighters);
     }
 }
