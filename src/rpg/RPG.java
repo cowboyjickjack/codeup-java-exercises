@@ -25,8 +25,8 @@ public class RPG { // class is like a blueprint
         // didn't need a constructor, just call directly on the class itself
         // and static classes don't need to instantiate an object
         int d20roll = D20.rollD20();
-        System.out.println(d20roll);
+        System.out.println("You rolled: " + d20roll);
 
-        System.out.println(Fighter.totalFighters);
+        System.out.println("Total Fighters: " + Fighter.totalFighters);
     }
 }
