@@ -3,6 +3,14 @@ public class Recursion {
 
     }
 
+    private static int multiplication(int num1, int num2) {
+        int total = num1;
+        if (num2 == 0) {
+            return 0;
+        }
+        return total + multiplication(num1, num2 -1);
+    }
+
     private static int sumOfNumbersMethod(int number) {
         if (number != 0) {
             return number + sumOfNumbersMethod(number - 1); // counts down from the users number, one at a time, and add them together
