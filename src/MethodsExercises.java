@@ -6,10 +6,14 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
 
 //        System.out.println(division(5, 2));
-//        getInteger(0, 100);
+//        int userInput = getInteger(0, 10);
+//        long factorial = getFactorial(userInput);
+//        System.out.println("Factorial => " + factorial);
 
 //        System.out.println(factorial(4));
-        D
+        int diceSides = getDiceSide();
+        System.out.println(rollDice(diceSides));
+
     }
 
     public static int addition(int num1, int num2) {
@@ -31,34 +35,40 @@ public class MethodsExercises {
         int userNumber = scanner.nextInt();
 
         if (userNumber >= min && userNumber <= max) {
-            System.out.println("Wow, you did it.");
+            System.out.println("Good choice.");
+            return userNumber;
         } else {
             System.out.println("You didn't follow the rules!");
+            return getInteger(min, max);
         }
-        return userNumber;
     }
-    public static long factorial(int n) {
+    public static long getFactorial(int num) {
         long fact = 1;
-        for (int i = 2; i <= n; i++) {
+        for (int i = 1; i <= num; i++) {
             fact = fact * i;
         }
         return fact;
     }
 
-    public class Dice {
-        public Random random;
+    public static int getDiceSide() {
+        int userChoice = getInteger(4, 20);
+        return userChoice;
+    }
 
-        public Dice() {
-            this.random = new Random();
-        }
+    public static int randomNumber(int min, int max) {
+        int result = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        return result;
+    }
 
-        public void main(String[] args) {
-            Dice d = new Dice();
-            System.out.println("The dice rolled a " + d.roll() + ".");
+    public static String rollDice(int sides) {
+        System.out.println("Do you want to roll the dice? [Y/N]");
+        Scanner scanner = new Scanner(System.in);
+        String userChoice = scanner.nextLine();
+        if (userChoice.equalsIgnoreCase("y")) {
+            int result1 = randomNumber(1, sides);
+            int result2 = randomNumber(1, sides);
+            return "The first dice rolled a " + result1 + ". The second dice rolled on " + result2 + ". The total is " + (result1 + result2) + ".";
         }
-
-        public int roll() {
-            return random.nextInt(20); // value in [0;20[, so [0;19]
-        }
+        return "Fine. Go away.";
     }
 }
