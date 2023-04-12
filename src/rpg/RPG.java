@@ -5,15 +5,15 @@ public class RPG { // class is like a blueprint
         // just like Scanner - don't need to import bc in the same class
         // below is instantiation of Fighter object
         Fighter fighter1 = new Fighter();
-        fighter1.name = "Arata";
-        fighter1.hitPoints = 17;
-        fighter1.maxDamage = 14;
+        fighter1.setName("Arata");
+        fighter1.setHitPoints(17);
+        fighter1.setMaxDamage(14);
         fighter1.printStats();
 
         Fighter fighter2 = new Fighter();
-        fighter2.name = "Sozalix";
-        fighter2.hitPoints = 25;
-        fighter2.maxDamage = 23;
+        fighter2.setName("Sozalix");
+        fighter2.setHitPoints(25);
+        fighter2.setMaxDamage(23);
         fighter2.printStats();
     }
 }
