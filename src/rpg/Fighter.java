@@ -36,6 +36,8 @@ public class Fighter {
         System.out.printf("%s has %d hit points and does %d maximum damage.%n", name, hitPoints, maxDamage);
     }
 
+
+
     // CONSTRUCTORS
     // No Arg Constructor, and it fixes itself so you don't need to reform old code!
     // The Java Compiler = 'out' folder, which is running it

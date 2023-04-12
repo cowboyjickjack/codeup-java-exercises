@@ -21,5 +21,10 @@ public class RPG { // class is like a blueprint
 
         Fighter fighter4 = new Fighter("J'zaargo", 69, 55);
         fighter4.printStats();
+
+        // didn't need a constructor, just call directly on the class itself
+        // and static classes don't need to instantiate an object
+        int d20roll = D20.rollD20();
+        System.out.println(d20roll);
     }
 }
