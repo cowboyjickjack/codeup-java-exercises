@@ -18,5 +18,8 @@ public class RPG { // class is like a blueprint
 
         Fighter fighter3 = new Fighter("Balgruuf", 95,45);
         fighter3.printStats();
+
+        Fighter fighter4 = new Fighter("J'zaargo", 69, 55);
+        fighter4.printStats();
     }
 }
