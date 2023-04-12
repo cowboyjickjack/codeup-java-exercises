@@ -38,6 +38,8 @@ public class Fighter {
 
     // CONSTRUCTORS
     // No Arg Constructor, and it fixes itself so you don't need to reform old code!
+    // The Java Compiler = 'out' folder, which is running it
+    // if NO explicit argument instructor, the Java Compiler will create it for you
     public Fighter(){
 
     }
