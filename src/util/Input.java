@@ -7,6 +7,8 @@ public class Input {
 
     // Constructing an instance of this class, the scanner should be set
     // to a new instance of the scanner class
+    // so everytime we make a new input object, we have a new scanner!
+    // and we're defining what an input object is
     public Input() {
         this.scanner = new Scanner(System.in);
     }
@@ -16,10 +18,16 @@ public class Input {
         return scanner.nextLine();
     }
 
+    // customizes the prompt
+    public String getString(String prompt){
+        System.out.println(prompt);
+        return scanner.nextLine();
+    }
+
     public boolean yesNo(){
-        System.out.println("Enter yes or no: ");
+        System.out.println("Do you want to continue? [Y/N]");
         String userInput = scanner.nextLine();
-        return userInput.equals("y") || userInput.equals("yes");
+        return userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y");
     }
 
     public int getInt(int min, int max){
