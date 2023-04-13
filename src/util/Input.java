@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Input {
 
-    private Scanner scanner;
+    private final Scanner scanner;
 
     public Input() {
         scanner = new Scanner(System.in);
@@ -21,16 +21,29 @@ public class Input {
     }
 
     public int getInt(int min, int max){
-        while (true) {
-            System.out.printf("Enter an integer between %d and %d: ", min, max);
-            try {
-                int input = Integer.parseInt(scanner.nextLine());
-                if (input >= min && input <= max) {
-                    return input;
-                }
-            } catch (NumberFormatException e) {
-            }
-            System.out.printf("Invalid input. Please enter an integer between %d and %d.\n", min, max);
+        System.out.printf("Enter an integer between %d and %d: ", min, max);
+        int userInput = scanner.nextInt();
+
+        if (userInput > min && userInput < max){
+            System.out.println("You followed the rules!");
+            return userInput;
+        } else {
+            System.out.println("PLEASE enter an integer between " + min + " and " + max + "!");
+            return getInt(min, max);
+        }
+
+    }
+
+    public double getDouble(double min, double max){
+        System.out.printf("Enter an integer between %.2f and %.2f: ", min, max);
+        double userInput = scanner.nextDouble();
+
+        if (userInput > min && userInput < max){
+            System.out.println("You followed the rules!");
+            return userInput;
+        } else {
+            System.out.println("PLEASE enter an integer between " + min + " and " + max + "!");
+            return getDouble(min, max);
         }
     }
 
