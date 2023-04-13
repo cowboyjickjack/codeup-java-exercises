@@ -2,7 +2,7 @@ package shapes;
 
 public class Circle {
 
-    private int Radius;
+    private double Radius;
 
     public Circle(double radius){
     }
