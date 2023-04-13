@@ -5,8 +5,10 @@ public class Input {
 
     private final Scanner scanner;
 
+    // Constructing an instance of this class, the scanner should be set
+    // to a new instance of the scanner class
     public Input() {
-        scanner = new Scanner(System.in);
+        this.scanner = new Scanner(System.in);
     }
 
     public String getString() {
