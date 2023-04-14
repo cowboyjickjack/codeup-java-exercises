@@ -52,4 +52,5 @@ public class Monster {
         this.hitPoints = hitPoints;
         this.damage = damage;
     }
+
 }
