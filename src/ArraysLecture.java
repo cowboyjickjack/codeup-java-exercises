@@ -1,5 +1,7 @@
 import rpg.Monster;
 
+import java.util.Arrays;
+
 public class ArraysLecture {
     // cannot access inside main bc it's outside the main method, unless it's declared static
     static Monster school = new Monster("School", 20, 450, 25);
@@ -53,12 +55,18 @@ public class ArraysLecture {
 //        monster[2] = blueDragon;
 
         // SHORT SYNTAX
-        // If defining an array of objects, the data-type is an OBJECT
+        // If defining an array of objects, the data-type is an OBJECT (capitalized)
         // that's why we used Monster[] instead of String or int
         Monster[] monsters = {orc, ogre, blueDragon};
 
-        for (Monster monster : monsters){
-            System.out.println(monster.getName()); // don't need for loop for the index, you can just use a getter!
+//        for (Monster monster : monsters){
+//            System.out.println(monster.getName() + " has " + monster.getHitPoints() + " hit points."); // don't need for loop for the index, you can just use a getter!
+//        }
+
+        // will create import statement by hovering over it
+        Arrays.sort(numbers);
+        for (int number : numbers){
+            System.out.println(number);
         }
 
     }

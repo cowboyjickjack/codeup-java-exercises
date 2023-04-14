@@ -1,30 +1,28 @@
-import persons.Person;
+import java.util.Arrays;
 
 public class ArraysExercises {
-    public static void main(String[] args) {
-        int[] numbers = {1, 2, 3, 4, 5};
-//        System.out.println(numbers);
 
-//        for (int i = 1; i <= numbers.length; i++) {
-//            System.out.println(i);
-//        }
-
-        int sizeOfArray = 3;
-
-        String[] Persons = new String[sizeOfArray];
-        Persons[0] = "John";
-        Persons[1] = "Joe";
-        Persons[2] = "Jimmy";
-
-        // Enhanced For Loop
-        for (String string : Persons) {
-            System.out.println(string);
-        }
-
-        // Traditional For Loop
-        for (int i = 1; i < Persons.length; i++){
-            System.out.println(Persons[i]);
-        }
+    // Created a new array, with a length one greater than the original.
+    // In the last place of that array, made a new Person object in that array
+    public static Person[] addPerson(Person[] personArray, Person newPerson){
+        Person[] newPersonArray = Arrays.copyOf(personArray, personArray.length + 1);
+        return newPersonArray;
     }
+
+    public static void main(String[] args) {
+
+        Person person1 = new Person("Alice");
+        Person person2 = new Person("Bob");
+        Person person3 = new Person("Charlie");
+
+        Person[] personLoop = {person1, person2, person3};
+
+        for (Person person : personLoop) {
+            System.out.println(person.getName());
+        }
+
+
+    }
+
 
 }
