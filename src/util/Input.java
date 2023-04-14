@@ -44,6 +44,16 @@ public class Input {
 
     }
 
+    public int getInt(){
+        System.out.println("Enter an integer:");
+        return scanner.nextInt();
+    }
+
+    public int getInt(String prompt){
+        System.out.println(prompt);
+        return scanner.nextInt();
+    }
+
     public double getDouble(double min, double max){
         System.out.printf("Enter an integer between %.2f and %.2f: ", min, max);
         double userInput = scanner.nextDouble();
