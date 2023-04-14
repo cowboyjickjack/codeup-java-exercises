@@ -17,11 +17,12 @@ public class MoviesApplication {
     public static void main(String[] args) {
         Input input = new Input();
 
-        int userChoice = input.getInt(menu);
-        while (true){
+        int userChoice = -1;
+        while (userChoice != 0){
+            userChoice = input.getInt(menu);
             switch (userChoice){
-                case 0 ->
-                case 1 ->
+                case 1:
+                    for (Movie movie: MoviesArray.find)
             }
         }
     }
