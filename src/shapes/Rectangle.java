@@ -11,10 +11,12 @@ public class Rectangle {
     }
 
     public double getArea(){
+        System.out.println("I'm in rectangle.");
         return length * width;
     }
 
     public double getPerimeter(){
+        System.out.println("I'm in rectangle.");
         return (width * 2) + (length * 2);
     }
 
