@@ -2,7 +2,7 @@ package vehicles;
 
 public class Garage {
 
-    Vehicle[] vehicles;
+    protected Vehicle[] vehicles; // protected = same as default
 
     public void alarmCascade(){
         for (Vehicle vehicle : this.vehicles){

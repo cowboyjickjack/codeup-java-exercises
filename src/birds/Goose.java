@@ -11,6 +11,7 @@ public class Goose extends Bird{
     }
 
     public Goose(){
+        super("Goose");
         System.out.println("New Goose created!");
     }
 }

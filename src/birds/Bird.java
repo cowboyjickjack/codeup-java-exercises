@@ -20,7 +20,7 @@ public class Bird {
         System.out.println("Laying an egg.");
     }
 
-    public Bird(){
+    public Bird(String name){
         System.out.println("New Bird created!");
     }
 }

@@ -7,6 +7,7 @@ public class Quaker extends Bird{ // This is saying it's a type of bird, and lin
     }
 
     public Quaker(){
+        super("Quaker");
         System.out.println("New Quaker created!");
     }
 }
