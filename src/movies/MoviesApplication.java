@@ -2,6 +2,8 @@ package movies;
 
 import util.Input;
 
+import java.util.Arrays;
+
 public class MoviesApplication {
 
     public static Movie[] addMovie(Movie[] moviesArray, Movie movie){
@@ -37,24 +39,24 @@ public class MoviesApplication {
         while (userChoice != 0){
             userChoice = input.getInt(menu);
             switch (userChoice){
-                case "1":
+                case 1:
                     for (Movie movie: movies){
                         System.out.printf("%s -- %s%n",movie.getName(), movie.getCategory());
                     }
                     break;
-                case "2":
+                case 2:
                     showAllMoviesFromCategory(movies,"animated");
                     break;
-                case "3":
+                case 3:
                     showAllMoviesFromCategory(movies,"drama");
                     break;
-                case "4":
+                case 4:
                     showAllMoviesFromCategory(movies,"horror");
                     break;
-                case "5":
+                case 5:
                     showAllMoviesFromCategory(movies,"scifi");
                     break;
-                case "6":
+                case 6:
                     String name = input.getString("Enter the  name of the movie;");
                     String category = input.getString("Enter the movie's category:");
                     movies = addMovie(MoviesArray.findAll(), new Movie(name, category));
