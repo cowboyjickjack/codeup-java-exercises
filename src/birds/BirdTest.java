@@ -7,5 +7,7 @@ public class BirdTest {
 
         quaker.setName("Quaker"); // how to set name when no constructor is made
         quaker.makeNoise();
+        Finch finch = new Finch();
+        finch.makeNoise();
     }
 }
