@@ -1,0 +1,11 @@
+package birds;
+
+public class BirdTest {
+    public static void main(String[] args) {
+//        Bird quaker = new Bird();
+        Quaker quaker = new Quaker(); // instead of above, post linking
+
+        quaker.setName("Quaker"); // how to set name when no constructor is made
+        quaker.makeNoise();
+    }
+}
