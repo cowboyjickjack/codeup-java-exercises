@@ -4,10 +4,15 @@ public class BirdTest {
     public static void main(String[] args) {
 //        Bird quaker = new Bird();
         Quaker quaker = new Quaker(); // instead of above, post linking
-
         quaker.setName("Quaker"); // how to set name when no constructor is made
         quaker.makeNoise();
+
         Finch finch = new Finch();
+        finch.setName("Finch");
         finch.makeNoise();
+
+        Goose goose = new Goose();
+        goose.setName("Goose");
+        goose.makeNoise("Honk!");
     }
 }

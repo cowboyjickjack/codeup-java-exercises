@@ -13,7 +13,7 @@ public class Bird {
     }
 
     public void makeNoise (){
-        System.out.println("Tweet tweet");
+        System.out.println(this.name + " says tweet tweet");
     }
 
     public void layEggs(){
