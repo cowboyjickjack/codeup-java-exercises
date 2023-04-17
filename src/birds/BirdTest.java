@@ -14,5 +14,10 @@ public class BirdTest {
         Goose goose = new Goose();
         goose.setName("Goose");
         goose.makeNoise("Honk!");
+
+        Bird goose2 = new Goose();
+        goose2.setName("Second Goose");
+        goose2.makeNoise();
+
     }
 }
