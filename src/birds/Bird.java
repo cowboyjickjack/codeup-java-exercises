@@ -19,4 +19,8 @@ public class Bird {
     public void layEggs(){
         System.out.println("Laying an egg.");
     }
+
+    public Bird(){
+        System.out.println("New Bird created!");
+    }
 }
