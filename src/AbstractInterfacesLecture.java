@@ -5,9 +5,14 @@ public class AbstractInterfacesLecture {
 //        Developer newGuy = new Developer("Jason", "Delivery"); // abstract class so cannot use!
 //        System.out.println(newGuy.work());
 
-        Bear bigBear = new Bear("Yogi", "Grizzly", 1200, true);
-        System.out.println(bigBear.skin());
+//        Bear bigBear = new Bear("Yogi", "Grizzly", 1200, true);
+//        System.out.println(bigBear.skin());
 
+        // defining array needs new String[]{}
+        WishList newWishList = new WishList("Wedding Registry", new String[]{"Baby Carriage", "Toaster", "Air Fryer", "Fondue Kit", "Single China Set"});
+        String newSharelink = newWishList.shareLink();
+        System.out.println(newSharelink); // will show the share link
+        System.out.println(newWishList.getName() + " => " + newSharelink);
     }
 }
 
