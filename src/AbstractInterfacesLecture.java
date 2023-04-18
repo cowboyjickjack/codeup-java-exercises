@@ -4,6 +4,10 @@ public class AbstractInterfacesLecture {
 //        Employee newGuy = new Employee("Jason", "Delivery"); // abstract class so cannot use!
 //        Developer newGuy = new Developer("Jason", "Delivery"); // abstract class so cannot use!
 //        System.out.println(newGuy.work());
+
+        Bear bigBear = new Bear("Yogi", "Grizzly", 1200, true);
+        System.out.println(bigBear.skin());
+
     }
 }
 
@@ -117,6 +121,8 @@ abstract class Animal {
     }
 }
 
+// implements almost 'drag and drop' interfaces, and separate concerns, use certain pieces
+// could even have an abstract class for enemies
 class Bear extends Animal implements Skinnable {
 
     // needs default constructor from Animal, hence 'super'
@@ -132,3 +138,76 @@ class Bear extends Animal implements Skinnable {
         return "Bear Hide";
     }
 }
+
+// ANOTHER EXAMPLE, FOR A BABY REGISTRY
+abstract class List {
+    protected String name;
+    protected int id;
+    protected String [] items; // array of items
+
+    public List(String name, String[] items) {
+        this.name = name;
+        this.items = items;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String[] getItems() {
+        return items;
+    }
+
+    public void setItems(String[] items) {
+        this.items = items;
+    }
+
+    // method to just add item
+    public void addItem(String item){
+
+    }
+}
+
+class WishList extends List implements  Shareable,Deletable {
+
+    // once again, needs constructor
+    public WishList(String name, String[] items) {
+        super(name, items);
+    }
+
+    @Override
+    public String shareLink() {
+        // do all the backend thingies to make a sharelink
+        return "https://mysharelink.com";
+    }
+
+    // once we added Deletable, we need to have the method of delete in here
+    @Override
+    public String delete() {
+        return (this.name + " was deleted.");
+    }
+}
+
+class PrivateList extends List implements Deletable { // it'll extend list, but WON'T be shareable, but WILL be Deletable
+    public PrivateList(String name, String[] items) {
+        super(name, items);
+    }
+
+    @Override
+    public String delete() {
+        return (this.name + " was deleted.");
+    }
+}
+
