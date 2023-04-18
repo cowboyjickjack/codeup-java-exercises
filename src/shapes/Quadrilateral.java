@@ -27,4 +27,8 @@ public abstract class Quadrilateral extends Shape implements Measurable{
     public abstract void setWidth(double num); // don't actually need to define the method, since it's abstract
 
     public abstract double getArea(double length, double width);
+
+    public abstract double getArea(double length);
+
+    public abstract double getPerimeter(double length);
 }
