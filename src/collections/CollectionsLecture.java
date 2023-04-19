@@ -2,10 +2,7 @@ package collections;
 
 import rpg.Monster;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class CollectionsLecture {
 
@@ -57,8 +54,28 @@ public class CollectionsLecture {
         poetsList.sort(Comparator.comparing(Poet::getName));
 
         for (Poet poet : poetsList){
-            System.out.println(poet.getName() + " was born in " + poet.getBirthDate() + ", died in " + poet.getDeathDate() + " and is a poet in " + poet.getStyle() + " poet.");
+//            System.out.println(poet.getName() + " was born in " + poet.getBirthDate() + ", died in " + poet.getDeathDate() + " and is a poet in " + poet.getStyle() + " poet.");
         }
+
+        // HASH MAPS
+
+        // key value pairs, so they must take two inputs (string = key, integer = value) in this case
+        HashMap<String, Integer> careerWins = new HashMap<>();
+
+        // To add elements to a HashMap, use the .put() method
+
+        careerWins.put("Gregg Popovich", 1366);
+        careerWins.put("Don Nelson", 1335);
+        careerWins.put("Lenny Wilkens", 1332);
+
+        // To retrieve an item from a HashMap, use .get() and pass it the key
+
+        System.out.println(careerWins.get("Gregg Popovich"));
+
+        // To replace a value, use .replace() and pass it the key
+
+        careerWins.replace("Gregg Popovich", 1367);
+        System.out.println(careerWins.get("Gregg Popovich"));
     }
 
 }
