@@ -4,6 +4,8 @@ public class Vehicle {
 
     private String name;
 
+    public Vehicle(){};
+
     public String getName(){
         return name;
     }

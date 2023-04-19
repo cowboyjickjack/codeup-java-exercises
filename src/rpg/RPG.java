@@ -1,5 +1,7 @@
 package rpg;
 
+import java.util.ArrayList;
+
 public class RPG { // class is like a blueprint
     public static void main(String[] args) {
         // just like Scanner - don't need to import bc in the same class
@@ -17,7 +19,7 @@ public class RPG { // class is like a blueprint
 //        fighter2.printStats();
 
         Fighter fighter3 = new Fighter("Balgruuf", 95,45);
-        fighter3.printStats();
+//        fighter3.printStats();
 
         Fighter fighter4 = new Fighter("J'zaargo", 69, 55);
 //        fighter4.printStats();
@@ -25,8 +27,11 @@ public class RPG { // class is like a blueprint
         // didn't need a constructor, just call directly on the class itself
         // and static classes don't need to instantiate an object
         int d20roll = D20.rollD20();
-        System.out.println("You rolled: " + d20roll);
+//        System.out.println("You rolled: " + d20roll);
 
-        System.out.println("Total Fighters: " + Fighter.totalFighters);
+//        System.out.println("Total Fighters: " + Fighter.totalFighters);
+
+        // COLLECTIONS
+        ArrayList<Monster> monsterList = new ArrayList<>(); // now we don't need to declare a size, bc it's dynamically sized
     }
 }
