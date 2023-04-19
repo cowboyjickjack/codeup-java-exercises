@@ -44,9 +44,6 @@ public class GradesApplication {
 //                entry("Quintyn", quintyn),
 //                entry("Kaeden", kaeden)
 //        );
-
-//        Map<String, Student> studentMap = new HashMap<>(students);
-
 //        studentMap.forEach((name, student)->{ // -> is java's version of the arrow function
 //            System.out.println(name + " has a " + student + " GPA. Their GitHub Username is: " + student.getUsername());
 //        });
@@ -62,10 +59,9 @@ public class GradesApplication {
             System.out.println(students.get(username).getGradeAverage());
         }
 
-//        System.out.println("Welcome!");
-//        System.out.println("Here are the GitHub usernames of our students:");
-//
-//        System.out.println(sarah.getName());
+//        Map<String, Student> studentMap = new HashMap<>(students);
 
+        System.out.println("Welcome!");
+        System.out.println("Here are the GitHub usernames of our students:");
     }
 }
