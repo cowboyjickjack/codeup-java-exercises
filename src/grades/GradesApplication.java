@@ -12,10 +12,10 @@ public class GradesApplication {
 
         Map<String, Student> students = new HashMap<>(); // created the new hashmap
 
-        Student sarah = new Student("Sarah");
-        Student arusa = new Student("Arusa");
-        Student quintyn = new Student("Quintyn");
-        Student kaeden = new Student("Kaeden");
+//        Student sarah = new Student("Sarah");
+//        Student arusa = new Student("Arusa");
+//        Student quintyn = new Student("Quintyn");
+//        Student kaeden = new Student("Kaeden");
 
         students.put("ClownTime69", new Student("Sarah"));
         students.get("ClownTime69").addGrade(90);
@@ -38,29 +38,34 @@ public class GradesApplication {
         students.get("DutchMaster25").addGrade(88);
         students.get("DutchMaster25").addGrade(100);
 
-        students = Map.ofEntries(
-                entry("Sarah", sarah),
-                entry("Arusa", arusa),
-                entry("Quintyn", quintyn),
-                entry("Kaeden", kaeden)
-        );
+//        students = Map.ofEntries(
+//                entry("Sarah", sarah),
+//                entry("Arusa", arusa),
+//                entry("Quintyn", quintyn),
+//                entry("Kaeden", kaeden)
+//        );
 
-        Map<String, Student> studentMap = new HashMap<>(students);
+//        Map<String, Student> studentMap = new HashMap<>(students);
 
 //        studentMap.forEach((name, student)->{ // -> is java's version of the arrow function
 //            System.out.println(name + " has a " + student + " GPA. Their GitHub Username is: " + student.getUsername());
 //        });
 
-        for (Map.Entry<String, Student> studentEntry : studentMap.entrySet()){
-            System.out.println("Student: " + studentEntry.getKey());
+//        for (Map.Entry<String, Student> studentEntry : studentMap.entrySet()){
+//            System.out.println("Student: " + studentEntry.getKey());
 //            System.out.println("GPA: " + studentEntry.getValue().getGradeAverage());
-        }
-
-//        for (String username : students.keySet()) {
-//            Student student = students.get(username);
-//            System.out.println(username + ": " + student.getName() + "'s average grade is " + student.getGradeAverage());
 //        }
 
+        for (String username : students.keySet()) {
+            System.out.println(username);
+            System.out.println(students.get(username).getName());
+            System.out.println(students.get(username).getGradeAverage());
+        }
+
+//        System.out.println("Welcome!");
+//        System.out.println("Here are the GitHub usernames of our students:");
+//
+//        System.out.println(sarah.getName());
 
     }
 }
