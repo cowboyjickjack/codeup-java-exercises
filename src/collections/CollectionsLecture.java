@@ -115,10 +115,10 @@ public class CollectionsLecture {
         // An EntrySet is a set of entry object. Entry objects are objects with two properties
         // a key and a value, and getters for both the key and value
 
-//        for (Map.Entry<String, Monster> monsterEntry : monsterHashMap.entrySet()){
-//            System.out.println("The key is " + monsterEntry.getKey());
-//            System.out.println(monsterEntry.getValue().getName() + " has " + monsterEntry.getValue().getHitPoints() + " Hit Points.");
-//        }
+        for (Map.Entry<String, Monster> monsterEntry : monsterHashMap.entrySet()){
+            System.out.println("The key is " + monsterEntry.getKey());
+            System.out.println(monsterEntry.getValue().getName() + " has " + monsterEntry.getValue().getHitPoints() + " Hit Points.");
+        }
 
         // There is also a forEach loop
 

@@ -12,25 +12,31 @@ public class GradesApplication {
 
         Map<String, Student> students = new HashMap<>(); // created the new hashmap
 
-        Student sarah = new Student("Sarah", "ClownTime69");
-        sarah.addGrade(90);
-        sarah.addGrade(100);
-        sarah.addGrade(98);
+        Student sarah = new Student("Sarah");
+        Student arusa = new Student("Arusa");
+        Student quintyn = new Student("Quintyn");
+        Student kaeden = new Student("Kaeden");
 
-        Student arusa = new Student("Arusa", "BelovedHussain25");
-        arusa.addGrade(69);
-        arusa.addGrade(100);
-        arusa.addGrade(94);
+        students.put("ClownTime69", new Student("Sarah"));
+        students.get("ClownTime69").addGrade(90);
+        students.get("ClownTime69").addGrade(100);
+        students.get("ClownTime69").addGrade(98);
+        System.out.println(students.get("ClownTime69").getGradeAverage());
 
-        Student quintyn = new Student("Quintyn", "ScaryBoy666");
-        quintyn.addGrade(100);
-        quintyn.addGrade(98);
-        quintyn.addGrade(99);
+        students.put("BelovedHussain25", new Student("Arusa"));
+        students.get("BelovedHussain25").addGrade(69);
+        students.get("BelovedHussain25").addGrade(100);
+        students.get("BelovedHussain25").addGrade(94);
 
-        Student kaeden = new Student("Kaeden", "DutchMaster25");
-        kaeden.addGrade(98);
-        kaeden.addGrade(88);
-        kaeden.addGrade(100);
+        students.put("ScaryBoy666", new Student("Quintyn"));
+        students.get("ScaryBoy666").addGrade(100);
+        students.get("ScaryBoy666").addGrade(98);
+        students.get("ScaryBoy666").addGrade(99);
+
+        students.put("DutchMaster25", new Student("Deaden"));
+        students.get("DutchMaster25").addGrade(98);
+        students.get("DutchMaster25").addGrade(88);
+        students.get("DutchMaster25").addGrade(100);
 
         students = Map.ofEntries(
                 entry("Sarah", sarah),
@@ -41,9 +47,19 @@ public class GradesApplication {
 
         Map<String, Student> studentMap = new HashMap<>(students);
 
-        studentMap.forEach((name, student)->{ // -> is java's version of the arrow function
-            System.out.println(name + " has a " + student.getGradeAverage() + " GPA. Their GitHub username is: " + student.getUsername());
-        });
+//        studentMap.forEach((name, student)->{ // -> is java's version of the arrow function
+//            System.out.println(name + " has a " + student + " GPA. Their GitHub Username is: " + student.getUsername());
+//        });
+
+        for (Map.Entry<String, Student> studentEntry : studentMap.entrySet()){
+            System.out.println("Student: " + studentEntry.getKey());
+//            System.out.println("GPA: " + studentEntry.getValue().getGradeAverage());
+        }
+
+//        for (String username : students.keySet()) {
+//            Student student = students.get(username);
+//            System.out.println(username + ": " + student.getName() + "'s average grade is " + student.getGradeAverage());
+//        }
 
 
     }

@@ -2,7 +2,7 @@ package grades;
 
 public class StudentTest {
     public static void main(String[] args) {
-        Student sarah = new Student("Sarah", "ClownTime69");
+        Student sarah = new Student("Sarah");
 
         sarah.addGrade(90);
         sarah.addGrade(69);
