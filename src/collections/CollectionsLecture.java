@@ -4,6 +4,7 @@ import rpg.Monster;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class CollectionsLecture {
@@ -36,18 +37,28 @@ public class CollectionsLecture {
         ArrayList<Monster> monstersList = new ArrayList<>(Arrays.asList(monsters));
 
         // Looping over an array/arraylist is the same  and never changes
-        for (Monster monster : monstersList){
-            System.out.println(monster.getName());
-        }
+//        for (Monster monster : monstersList){
+//            System.out.println(monster.getName());
+//        }
 
         // Instead of a length property, Lists have a size method
-        System.out.println(monstersList.size());
+//        System.out.println(monstersList.size());
 
         // To access an array element, I use a bracket notation with the
         // index of the element: Monster[1]
         // but for lists, I use the .get() method and
         // pass the method the index
-        System.out.println(monstersList.get(2).getName());
+//        System.out.println(monstersList.get(2).getName());
+
+        // POET PRACTICE
+        ArrayList<Poet> poetsList = Poets.generatePoetList();
+
+        //sorting gets deep, but this is an example of sorting alphabetically
+        poetsList.sort(Comparator.comparing(Poet::getName));
+
+        for (Poet poet : poetsList){
+            System.out.println(poet.getName() + " was born in " + poet.getBirthDate() + ", died in " + poet.getDeathDate() + " and is a poet in " + poet.getStyle() + " poet.");
+        }
     }
 
 }
