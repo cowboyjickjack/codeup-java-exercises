@@ -70,6 +70,7 @@ public class Languages {
                 go, swift, rust, kotlin, ruby, php, objectiveC, sql, swiftObjectiveC, perl, groovy, scala, lua, r));
 
         // Sorting by name, then date
+        // two colons since you need it to REFERENCE the method, but not need to CALL on it
         languageArrayList.sort(Comparator.comparing(CodingLanguage::getName));
         languageArrayList.sort(Comparator.comparing(CodingLanguage::getCreatedDate));
 
