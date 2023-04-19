@@ -102,7 +102,7 @@ public class GradesApplication {
         System.out.println("Here are the GitHub usernames of our students:");
 
         for (String username : students.keySet()) {
-            System.out.print(username + " ");
+            System.out.print(username + " | ");
         }
 
         Scanner input = new Scanner(System.in);
