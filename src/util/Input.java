@@ -31,22 +31,34 @@ public class Input {
     }
 
     public int getInt(int min, int max){
-        System.out.printf("Enter an integer between %d and %d: ", min, max);
-        int userInput = scanner.nextInt();
-
-        if (userInput > min && userInput < max){
-            System.out.println("You followed the rules!");
-            return userInput;
-        } else {
-            System.out.println("PLEASE enter an integer between " + min + " and " + max + "!");
+        System.out.print("Enter a number between " + min + " and " + max + ": ");
+        String userInput = getString();
+        try {
+            Integer.valueOf(userInput);
+        } catch (NumberFormatException e) {
+            System.out.println("You did not enter a valid number. Please try again.");
             return getInt(min, max);
         }
-
+        int userNum = Integer.parseInt(userInput);
+        if (userNum >= min && userNum <= max) {
+            return userNum;
+        } else {
+            System.out.println("You did not enter a number between " + min + " and " + max + ". Try again.");
+            return getInt(min, max);
+        }
     }
 
     public int getInt(){
         System.out.println("Enter an integer:");
-        return scanner.nextInt();
+        String userInput = getString();
+        try {
+            Integer.valueOf(userInput);
+        } catch (NumberFormatException e) {
+            System.out.println("You did not enter a valid number. Please try again.");
+            return getInt();
+        }
+        int userNum = Integer.parseInt(userInput);
+        return Integer.parseInt(userInput);
     }
 
     public int getInt(String prompt){
