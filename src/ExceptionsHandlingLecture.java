@@ -15,7 +15,8 @@ public class ExceptionsHandlingLecture {
             // you can also throw multiple catches
             // this is referring to the original error we got with the out of bound integer
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println(e);
+            System.out.println(e.getMessage()); // .getMessage will only show the message
+            e.printStackTrace(); // shows up the full details of the exception, but not to where it'll kill the app
         }
 
         catch (Exception e){
@@ -27,6 +28,15 @@ public class ExceptionsHandlingLecture {
             // says, ok, do this instead!
             System.out.println("After the error happens...");
             // so now that we have logic, the error occurred, but the app went on :)
+
+            // finally will run NO MATTER WHAT
+            // hasn't really been seen in the wild
+        } finally {
+            System.out.println("This is my finally block");
         }
+
+        System.out.println("This is after the try/catch/finally");
+
+        // you can also have multiple try/catches in a method
     }
 }
