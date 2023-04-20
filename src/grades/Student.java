@@ -6,7 +6,7 @@ public class Student {
 
     private String name;
     private String username;
-    private ArrayList<Integer> grades; // keeps it as an empty array, so you can add to it :)
+    private ArrayList<Integer> grades = new ArrayList<>(); // keeps it as an empty array, so you can add to it :)
 
     public Student(String name) {
         this.name = name;
