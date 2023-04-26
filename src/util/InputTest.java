@@ -10,6 +10,7 @@ public class InputTest {
 //        System.out.println(userInput.yesNo());
 
 //        System.out.println(userInput.getInt(1, 10));
-        System.out.println(userInput.getDouble(0.1, 9.9));
+//        System.out.println(userInput.getDouble(0.1, 9.9));
+        System.out.println(userInput.calculateAverage(new int[]{5, 4, 3}));
     }
 }
